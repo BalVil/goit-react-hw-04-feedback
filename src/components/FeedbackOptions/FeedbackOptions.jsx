@@ -6,7 +6,9 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     <ButtonWrapp>
       {options.map(option => (
         <li key={option}>
-          <Button onClick={() => onLeaveFeedback(option)}>{option}</Button>
+          <Button type="button" name={option} onClick={onLeaveFeedback}>
+            {option}
+          </Button>
         </li>
       ))}
     </ButtonWrapp>
